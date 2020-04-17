@@ -1,0 +1,19 @@
+.app {
+  text-align: center;
+}
+
+.round {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.speaker-button {
+  background: url(./speaker.svg) no-repeat top left;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+}

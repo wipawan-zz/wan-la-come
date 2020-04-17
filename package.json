@@ -1,0 +1,19 @@
+{
+  "name": "wotd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "batch": "node -e 'require(\"./workers/Scraper.js\").batchScrape()'",
+    "deploy": "gcloud functions deploy getWord --runtime nodejs8 --trigger-http && gcloud functions deploy dailyScraper --runtime nodejs8 --trigger-topic daily-scrape",
+    "start:dev": "functions-framework --target=getWord"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/firestore": "^3.7.4",
+    "@google-cloud/functions-framework": "^1.5.1",
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
+  }
+}
